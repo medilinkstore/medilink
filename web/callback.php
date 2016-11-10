@@ -21,23 +21,23 @@ if($type != "text"){
 if ($text == 'はい') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "こちらの〇〇はいかがですか？",
+    "altText" => "よくある質問",
     "template" => [
       "type" => "buttons",
-      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
-      "title" => "○○レストラン",
-      "text" => "お探しのレストランはこれですね",
+      //"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
+      "title" => "会員登録・ログイン方法",
+      "text" => "お聞きになりたいことはこれですか？",
       "actions" => [
           [
             "type" => "postback",
-            "label" => "予約する",
+            "label" => "質問する",
             "data" => "action=buy&itemid=123"
           ],
           [
-            "type" => "postback",
-            "label" => "電話する",
-            "data" => "action=pcall&itemid=123"
-          ],
+//            "type" => "postback",
+//            "label" => "電話する",
+//            "data" => "action=pcall&itemid=123"
+//          ],
           [
             "type" => "uri",
             "label" => "詳しく見る",
