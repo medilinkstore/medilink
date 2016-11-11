@@ -21,69 +21,79 @@ if($type != "text"){
 if ($text == 'はい') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "よくある質問",
+    "altText" => "こちらの事項ですか?",
     "template" => [
       "type" => "buttons",
-      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img.jpg",
-      "title" => "会員登録・ログイン方法",
-      "text" => "お聞きになりたいことはこれですか？",
+      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img.png",
+      "title" => "よくある質問",
+      "text" => "こちらですか?",
       "actions" => [
           [
             "type" => "postback",
-            "label" => "質問する",
+            "label" => "会員登録・ログイン方法",
             "data" => "action=buy&itemid=123"
           ],
           [
             "type" => "postback",
-            "label" => "電話する",
+            "label" => "リーダーアプリ・コンテンツ",
+            "data" => "action=pcall&itemid=123"
+          ],
+          [
+            "type" => "postback",
+            "label" => "QBオンライン",
+            "data" => "action=pcall&itemid=123"
+          ],
+          [
+            "type" => "postback",
+            "label" => "医ンプット",
             "data" => "action=pcall&itemid=123"
           ],
           [
             "type" => "uri",
-            "label" => "詳しく聞く",
-            "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+            "label" => "詳しく見る",
+            "uri" => "https://www.medilink-study.com/user_data/qa.php" . $_SERVER['SERVER_NAME'] . "/"
           ],
           [
             "type" => "message",
-            "label" => "ほかの質問",
-            "text" => "ほかの質問をお願い"
+            "label" => "違うやつ",
+            "text" => "他の事"
           ]
       ]
     ]
   ];
 } else if ($text == 'いいえ') {
   exit;
-} else if ($text == 'ほかの質問をお願い') {
+} else if ($text == '他の事') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "候補を３つご案内しています。",
+    "altText" => "mediLink",
     "template" => [
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.jpg",
-            "title" => "●●レストラン",
-            "text" => "こちらにしますか？",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.png",
+            "title" => "mediLinkとは",
+            "text" => "こちらですか？",
             "actions" => [
               [
                   "type" => "postback",
-                  "label" => "予約する",
+                  "label" => "見る",
                   "data" => "action=rsv&itemid=111"
               ],
               [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=111"
+                  "type" => "uri",
+                  "label" => "問い合わせる（ブラウザ起動）",
+                  "uri" => "https://www.medilink-study.com/contact/" . $_SERVER['SERVER_NAME'] . "/"
               ],
               [
                   "type" => "uri",
                   "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+                  "uri" => "https://www.medilink-study.com/user_data/about.php" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.png",
             "title" => "▲▲レストラン",
             "text" => "それともこちら？（２つ目）",
             "actions" => [
@@ -105,7 +115,7 @@ if ($text == 'はい') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.jpg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.png",
             "title" => "■■レストラン",
             "text" => "はたまたこちら？（３つ目）",
             "actions" => [
