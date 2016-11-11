@@ -41,7 +41,7 @@ if ($text == 'はい') {
           [
             "type" => "uri",
             "label" => "詳しく見る",
-            "uri" => "https://www.medilink-study.com/user_data/qa.php" . $_SERVER['SERVER_NAME'] . "/"
+            "uri" => "https://www.medilink-study.com/user_data/qa.php"
           ],
           [
             "type" => "message",
