@@ -24,7 +24,7 @@ if ($text == 'はい') {
     "altText" => "よくある質問",
     "template" => [
       "type" => "buttons",
-      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
+      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img.jpg",
       "title" => "会員登録・ログイン方法",
       "text" => "お聞きになりたいことはこれですか？",
       "actions" => [
