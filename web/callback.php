@@ -39,23 +39,13 @@ if ($text == 'はい') {
             "data" => "action=pcall&itemid=123"
           ],
           [
-            "type" => "postback",
-            "label" => "QBオンライン",
-            "data" => "action=pcall&itemid=123"
-          ],
-          [
-            "type" => "postback",
-            "label" => "医ンプット",
-            "data" => "action=pcall&itemid=123"
-          ],
-          [
             "type" => "uri",
             "label" => "詳しく見る",
             "uri" => "https://www.medilink-study.com/user_data/qa.php" . $_SERVER['SERVER_NAME'] . "/"
           ],
           [
             "type" => "message",
-            "label" => "違うやつ",
+            "label" => "他の事",
             "text" => "他の事"
           ]
       ]
