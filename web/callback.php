@@ -24,14 +24,14 @@ if ($text == 'はい') {
     "altText" => "こちらの事項ですか?",
     "template" => [
       "type" => "buttons",
-      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img.png",
+      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.png",
       "title" => "よくある質問",
       "text" => "こちらですか?",
       "actions" => [
           [
-            "type" => "message",
+            "type" => "postback",
             "label" => "会員登録・ログイン方法",
-            "text" => "会員登録・ログイン方法"
+            "data" => "action=buy&itemid=123"
           ],
           [
             "type" => "postback",
@@ -39,13 +39,23 @@ if ($text == 'はい') {
             "data" => "action=pcall&itemid=123"
           ],
           [
+            "type" => "postback",
+            "label" => "QBオンライン",
+            "data" => "action=pcall&itemid=123"
+          ],
+          [
+            "type" => "postback",
+            "label" => "医ンプット",
+            "data" => "action=pcall&itemid=123"
+          ],
+          [
             "type" => "uri",
             "label" => "詳しく見る",
-            "uri" => "https://www.medilink-study.com/user_data/qa.php"
+            "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
           ],
           [
             "type" => "message",
-            "label" => "他の事",
+            "label" => "違うやつ",
             "text" => "他の事"
           ]
       ]
@@ -53,7 +63,6 @@ if ($text == 'はい') {
   ];
 } else if ($text == 'いいえ') {
   exit;
-
 } else if ($text == '他の事') {
   $response_format_text = [
     "type" => "template",
@@ -74,12 +83,12 @@ if ($text == 'はい') {
               [
                   "type" => "uri",
                   "label" => "問い合わせる（ブラウザ起動）",
-                  "uri" => "https://www.medilink-study.com/contact/"
+                  "uri" => "https://www.medilink-study.com/contact/" . $_SERVER['SERVER_NAME'] . "/"
               ],
               [
                   "type" => "uri",
                   "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://www.medilink-study.com/user_data/about.php"
+                  "uri" => "https://www.medilink-study.com/user_data/about.php" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
