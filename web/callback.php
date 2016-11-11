@@ -24,24 +24,24 @@ if ($text == 'はい') {
     "altText" => "こちらの事項ですか?",
     "template" => [
       "type" => "buttons",
-      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.png",
+      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
       "title" => "よくある質問",
       "text" => "こちらですか?",
       "actions" => [
           [
-            "type" => "postback",
+            "type" => "message",
             "label" => "会員登録・ログイン方法",
-            "data" => "action=buy&itemid=123"
+            "data" => "会員登録"
           ],
           [
-            "type" => "postback",
+            "type" => "message",
             "label" => "リーダーアプリ・コンテンツ",
-            "data" => "action=pcall&itemid=123"
+            "text" => "リーダーアプリ"
           ],
           [
-            "type" => "postback",
-            "label" => "リーダーアプリ・コンテンツ",
-            "data" => "action=pcall&itemid=123"
+            "type" => "message",
+            "label" => "購入方法",
+            "text" => "購入方法"
           ],
           [
             "type" => "message",
@@ -53,6 +53,43 @@ if ($text == 'はい') {
   ];
 } else if ($text == 'いいえ') {
   exit;
+//ここから会員登録関連
+} else if ($text == '会員登録') {
+  $response_format_text = [
+    "type" => "template",
+    "altText" => "こちらの事項ですか?",
+    "template" => [
+      "type" => "buttons",
+      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
+      "title" => "会員登録・ログイン方法",
+      "text" => "こちらですか?",
+      "actions" => [
+          [
+            "type" => "message",
+            "label" => "会員登録したのに確認メールが届かない",
+            "data" => "届かない"
+          ],
+          [
+            "type" => "message",
+            "label" => "携帯メールの受信設定の方法がわからない",
+            "text" => "携帯メールの受信設定"
+          ],
+          [
+            "type" => "message",
+            "label" => "パスワードを忘れた／パスワードを変更したい",
+            "text" => "パスワードを忘れた"
+          ],
+          [
+            "type" => "message",
+            "label" => "「メールアドレスもしくはパスワードが正しくありません」と表示され、ログインできない",
+            "text" => "ログインできない"
+          ]
+      ]
+    ]
+  ];
+}
+
+//ここまで会員登録関連
 } else if ($text == '他の事') {
   $response_format_text = [
     "type" => "template",
@@ -61,7 +98,7 @@ if ($text == 'はい') {
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.png",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.jpg",
             "title" => "mediLinkとは",
             "text" => "こちらですか？",
             "actions" => [
@@ -83,7 +120,7 @@ if ($text == 'はい') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.png",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
             "title" => "▲▲レストラン",
             "text" => "それともこちら？（２つ目）",
             "actions" => [
@@ -105,7 +142,7 @@ if ($text == 'はい') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.png",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.jpg",
             "title" => "■■レストラン",
             "text" => "はたまたこちら？（３つ目）",
             "actions" => [
