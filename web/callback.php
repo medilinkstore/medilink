@@ -40,13 +40,13 @@ if ($text == 'はい') {
 //          ],
           [
             "type" => "uri",
-            "label" => "詳しく見る",
+            "label" => "詳しく聞く",
             "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
           ],
           [
             "type" => "message",
-            "label" => "違うやつ",
-            "text" => "違うやつお願い"
+            "label" => "ほかの質問",
+            "text" => "ほかの質問をお願い"
           ]
       ]
     ]
