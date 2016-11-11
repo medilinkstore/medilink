@@ -83,57 +83,47 @@ if ($text == 'はい') {
               [
                   "type" => "uri",
                   "label" => "問い合わせる（ブラウザ起動）",
-                  "uri" => "https://www.medilink-study.com/contact/" . $_SERVER['SERVER_NAME'] . "/"
+                  "uri" => "https://www.medilink-study.com/contact/"
               ],
               [
                   "type" => "uri",
                   "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://www.medilink-study.com/user_data/about.php" . $_SERVER['SERVER_NAME'] . "/"
+                  "uri" => "https://www.medilink-study.com/user_data/about.php"
               ]
             ]
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.png",
-            "title" => "▲▲レストラン",
+            "title" => "mediLinkの構成",
             "text" => "それともこちら？（２つ目）",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=222"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=222"
+                  "type" => "uri",
+                  "label" => "詳しく見る（ブラウザ起動）",
+                  "uri" => "https://www.medilink-study.com/user_data/about.php"
               ],
               [
                   "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
-              ]
+                  "label" => "問い合わせる（ブラウザ起動）",
+                  "uri" => "https://www.medilink-study.com/contact/"
+              ],
             ]
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.png",
-            "title" => "■■レストラン",
-            "text" => "はたまたこちら？（３つ目）",
+            "title" => "mediLinkアプリ 複数端末でのご利用について",
+            "text" => "もしくはこれ？（３つ目）",
             "actions" => [
-              [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=333"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=333"
-              ],
               [
                   "type" => "uri",
                   "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
-              ]
+                  "uri" => "https://www.medilink-study.com/user_data/about.php"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "問い合わせる（ブラウザ起動）",
+                  "uri" => "https://www.medilink-study.com/contact/"
+              ],
             ]
           ]
       ]
