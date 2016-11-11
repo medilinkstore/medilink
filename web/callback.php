@@ -53,37 +53,7 @@ if ($text == 'はい') {
   ];
 } else if ($text == 'いいえ') {
   exit;
-//会員登録・ログイン方法
-} else if ($text == '会員登録・ログイン方法') {
-  $response_format_text = [
-    "type" => "template",
-    "altText" => "mediLink",
-    "template" => [
-      "type" => "carousel",
-      "columns" => [
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.png",
-            "title" => "会員登録・ログイン方法",
-            "text" => "こちらですか？",
-            "actions" => [
-              [
-                  "type" => "message",
-                  "label" => "会員登録したのに確認メールが届かない",
-                  "text" => "会員登録したのに確認メールが届かない"
-              ],
-              [
-                  "type" => "message",
-                  "label" => "携帯メールの受信設定の方法がわからない",
-                  "text" => "携帯メールの受信設定の方法がわからない"
-              ],
-              [
-                  "type" => "message",
-                  "label" => "パスワードを忘れた／パスワードを変更したい",
-                  "text" => "パスワードを忘れた／パスワードを変更したい"
-              ]
-            ]
-          ],
-	
+
 } else if ($text == '他の事') {
   $response_format_text = [
     "type" => "template",
