@@ -24,7 +24,7 @@ if ($text == 'はい') {
     "altText" => "よくある質問",
     "template" => [
       "type" => "buttons",
-      //"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
+      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
       "title" => "会員登録・ログイン方法",
       "text" => "お聞きになりたいことはこれですか？",
       "actions" => [
@@ -34,10 +34,10 @@ if ($text == 'はい') {
             "data" => "action=buy&itemid=123"
           ],
           [
-//            "type" => "postback",
-//            "label" => "電話する",
-//            "data" => "action=pcall&itemid=123"
-//          ],
+            "type" => "postback",
+            "label" => "電話する",
+            "data" => "action=pcall&itemid=123"
+          ],
           [
             "type" => "uri",
             "label" => "詳しく聞く",
