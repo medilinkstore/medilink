@@ -53,7 +53,7 @@ if ($text == 'はい') {
   ];
 } else if ($text == 'いいえ') {
   exit;
-} else if ($text == '違うやつお願い') {
+} else if ($text == 'ほかの質問をお願い') {
   $response_format_text = [
     "type" => "template",
     "altText" => "候補を３つご案内しています。",
