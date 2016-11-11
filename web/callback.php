@@ -40,18 +40,8 @@ if ($text == 'はい') {
           ],
           [
             "type" => "postback",
-            "label" => "QBオンライン",
+            "label" => "リーダーアプリ・コンテンツ",
             "data" => "action=pcall&itemid=123"
-          ],
-          [
-            "type" => "postback",
-            "label" => "医ンプット",
-            "data" => "action=pcall&itemid=123"
-          ],
-          [
-            "type" => "uri",
-            "label" => "詳しく見る",
-            "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
           ],
           [
             "type" => "message",
