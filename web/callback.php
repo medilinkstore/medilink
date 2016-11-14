@@ -124,6 +124,13 @@ if ($text == 'はい') {
       ]
     ]
   ];
+
+//対処方法ライト版
+} else if ($text == '確認メールが届かない対処方法') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "確認メールは、ご登録いただいたアドレスに自動的に送信されます。下記をご確認ください。 "
+			];
 } else if ($text == '他の事') {
   $response_format_text = [
     "type" => "template",
