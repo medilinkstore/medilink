@@ -48,6 +48,7 @@ if ($text == 'はい') {
   ];
 } else if ($text == 'いいえ') {
   exit;
+//会員登録
 } else if ($text == '会員登録') {
   $response_format_text = [
     "type" => "template",
@@ -151,6 +152,168 @@ if ($text == 'はい') {
 （パスワードを変更する） 
 サイトにログインした状態で、プロフィール編集画面(https://www.medilink-study.com/mypage/change.php)より任意のパスワードに変更ができます。"
 			];
+
+} else if ($text == 'リーダーアプリ') {
+  $response_format_text = [
+    "type" => "template",
+    "altText" => "mediLink",
+    "template" => [
+      "type" => "carousel",
+      "columns" => [
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/mail.png",
+            "title" => "リーダーアプリ・コンテンツ",
+            "text" => "こちらですか？",
+            "actions" => [
+              [
+                  "type" => "message",
+                  "label" => "「mediLink」アプリの入手方法がわからない",
+                  "text" => "入手方法"
+              ],
+              [
+                  "type" => "message",
+                  "label" => "mediLinkコンテンツのデータサイズを知りたい",
+                  "uri" => "データサイズ"
+              ],
+              [
+                  "type" => "message",
+                  "label" => "通信環境のない（オフライン）状態でコンテンツを使用したい",
+                  "uri" => "オフライン"
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/jushin.png",
+            "title" => "リーダーアプリ・コンテンツ",
+            "text" => "こちらですか？",
+            "actions" => [
+              [
+                  "type" => "message",
+                  "label" => "複数の端末で使いたい",
+                  "text" => "複数"
+              ],
+              [
+                  "type" => "message",
+                  "label" => "端末の機種変更などをおこなう際の手続きを知りたい",
+                  "text" => "機種変更"
+              ],
+              [
+                  "type" => "message",
+                  "label" => "「一度に利用できる端末(二台まで)を超えています」と表示され、アプリにログインできない",
+                  "text" => "一度に利用できる端末"
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/password.jpg",
+            "title" => "リーダーアプリ・コンテンツ",
+            "text" => "こちらですか?",
+            "actions" => [
+              [
+                  "type" => "message",
+                  "label" => "メモ、マーカー、ブックマークを、複数の端末で共有したい",
+                  "text" => "メモ"
+              ],
+              [
+                  "type" => "message",
+                  "label" => "「mediLink版イヤーノートアプリ」と書籍『イヤーノート』のちがいを知りたい",
+                  "text" => "ちがい"
+              ],
+              [
+                  "type" => "message",
+                  "label" => "「mediLink版イヤーノートアプリ」はどうすれば使えますか？",
+                  "text" => "mediLink版イヤーノートアプリ"
+              ]
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/password.jpg",
+            "title" => "リーダーアプリ・コンテンツ",
+            "text" => "こちらですか?",
+            "actions" => [
+              [
+                  "type" => "message",
+                  "label" => "「mediLink版イヤーノートアプリアップグレードの回数や、年度またぎの制限について知りたい",
+                  "text" => "制限"
+              ],
+              [
+                  "type" => "message",
+                  "label" => "「mediLink版イヤーノートアプリ」と「M2PLUS版イヤーノート」は同じものではないですか",
+                  "text" => "M2PLUS"
+              ],
+              [
+                  "type" => "message",
+                  "label" => "書籍に掲載されているページ番号で検索ができない",
+                  "text" => "ページ番号"
+              ]
+            ]
+          ]
+      ]
+    ]
+  ];
+//一次回答
+} else if ($text == '入手方法') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "App Store、Google Playで、無料ダウンロードできます。 "
+			];
+} else if ($text == 'データサイズ') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "各コンテンツのページに、ダウンロードに必要な空き容量を表示しています。ただし、コンテンツのデータサイズは品質向上に伴い、増減の可能性があります。 "
+			];
+} else if ($text == 'オフライン') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "お手持ちの端末でmediLinkアプリにログインし、ダウンロード済みのコンテンツは、オフラインでもご利用いただけます。"
+			];
+} else if ($text == '複数') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "2端末までは、同時にログインが可能です。たとえばiPadとiPhoneで、同時にログインした状態でご利用いただけます。"
+			];
+} else if ($text == '機種変更') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "mediLinkアプリは、アカウントごとにログイン端末を管理しているため、機種変更前の端末で、下記のお手続きをお願いいたします。
+詳細はこちらをご参照ください。(https://www.medilink-study.com/user_data/qa.php#app)"
+			];
+} else if ($text == '一度に利用できる端末') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "mediLinkアプリは、アカウントごとにログイン中の端末が管理されており、２台まで同時にログインが可能です。アプリ上でログアウトすれば、端末の登録情報は解除され、別の端末でもログインができます。
+詳細はこちらをご参照ください。(https://www.medilink-study.com/user_data/qa.php#app)"
+			];
+} else if ($text == 'メモ') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "「Evernote」に保存し、複数端末で同期することが可能です。
+詳細はこちらをご参照ください。(https://www.medilink-study.com/user_data/qa.php#app)"
+			];
+} else if ($text == 'ちがい') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "書籍付録のうち『Quick Reference for Resident』は、アプリ版には未収録です。一方、アプリ版には「手術NAVI」という書籍版にはないコンテンツが付属しています。（2016年4月現在）また、アプリ版にはメモ機能はありますが、手書きでイラストを書き込むなど、紙面を自由に使えるわけではありません。"
+			];
+} else if ($text == 'mediLink版イヤーノートアプリ') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "ご利用開始までのながれ(https://www.medilink-study.com/user_data/usagestart.php)をご確認のうえ、ご購入をお手続きください。"
+			];
+} else if ($text == '制限') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "アップグレードに回数制限はありません。"
+			];
+} else if ($text == 'M2PLUS') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "「mediLink版イヤーノートアプリ」はリーダーアプリ「mediLink」で閲覧するコンテンツであり、リーダーアプリ「M2PLUS Launcher」上では閲覧できません。「mediLink版」と「M2PLUS版」との間に連携機能はありません。"
+			];
+} else if ($text == 'ページ番号') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "2016年8月現在、mediLink版イヤーノートでは、書籍のページ番号で検索する際、下記のようになっております。"
+			];
+
 } else if ($text == '他の事') {
   $response_format_text = [
     "type" => "template",
@@ -227,6 +390,10 @@ if ($text == 'はい') {
       ]
     ]
   ];
+//会員登録
+
+
+
 } else if ($text == '質問') {
   $response_format_text = [
     "type" => "template",
