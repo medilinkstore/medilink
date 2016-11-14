@@ -51,32 +51,75 @@ if ($text == 'はい') {
 } else if ($text == '会員登録') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "こちらの事項ですか?",
+    "altText" => "mediLink",
     "template" => [
-      "type" => "buttons",
-      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
-      "title" => "会員登録・ログイン方法",
-      "text" => "こちらですか?",
-      "actions" => [
+      "type" => "carousel",
+      "columns" => [
           [
-            "type" => "message",
-            "label" => "会員登録したのに確認メールが届かない",
-            "text" => "確認メール"
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.jpg",
+            "title" => "会員登録したのに確認メールが届かない",
+            "text" => "こちらですか？",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "見る",
+                  "data" => "action=rsv&itemid=111"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "問い合わせる（ブラウザ起動）",
+                  "uri" => "https://www.medilink-study.com/contact/"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "詳しく見る（ブラウザ起動）",
+                  "uri" => "https://www.medilink-study.com/user_data/about.php"
+              ]
+            ]
           ],
           [
-            "type" => "message",
-            "label" => "携帯メールの受信設定の方法がわからない",
-            "text" => "携帯メール"
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
+            "title" => "携帯メールの受信設定の方法がわからない",
+            "text" => "それともこちら？（２つ目）",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "見る",
+                  "data" => "action=rsv&itemid=222"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "問い合わせる（ブラウザ起動）",
+                  "uri" => "https://www.medilink-study.com/contact/"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "詳しく見る（ブラウザ起動）",
+                  "uri" => "https://www.medilink-study.com/user_data/about.php"
+              ]
+            ]
           ],
           [
-            "type" => "message",
-            "label" => "パスワードを忘れた／パスワードを変更したい",
-            "text" => "パスワード"
-          ],
-          [
-            "type" => "message",
-            "label" => "違うやつ",
-            "text" => "他の事"
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.jpg",
+            "title" => "パスワードを忘れた／パスワードを変更したい",
+            "text" => "はたまたこちら？（３つ目）",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "見る",
+                  "data" => "action=rsv&itemid=222"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "問い合わせる（ブラウザ起動）",
+                  "uri" => "https://www.medilink-study.com/contact/"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "詳しく見る（ブラウザ起動）",
+                  "uri" => "https://www.medilink-study.com/user_data/about.php"
+              ]
+            ]
           ]
       ]
     ]
