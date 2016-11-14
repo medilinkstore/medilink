@@ -154,6 +154,29 @@ if ($text == 'はい') {
 サイトにログインした状態で、プロフィール編集画面(https://www.medilink-study.com/mypage/change.php)より任意のパスワードに変更ができます。"
 			];
 
+} else if ($text == '最も多い質問') {
+  $response_format_text = [
+    "type" => "template",
+    "altText" => "最も多い質問",
+    "template" => [
+      "type" => "buttons",
+      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
+      "title" => "最も多い質問",
+      "text" => "こちらですか?",
+      "actions" => [
+          [
+            "type" => "message",
+            "label" => "「一度に利用できる端末(二台まで)を超えています」と表示され、アプリにログインできない",
+            "text" => "アプリにログインできない"
+          ],
+          [
+            "type" => "message",
+            "label" => "シリアルナンバーを登録しても、QBオンラインが使えない、解説が表示されない",
+            "text" => "使えない"
+          ],
+      ]
+    ]
+  ];
 
 //他の事
 } else if ($text == '他の事') {
