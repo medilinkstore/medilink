@@ -156,13 +156,13 @@ if ($text == 'はい') {
 } else if ($text == 'リーダーアプリ') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "mediLink",
+    "altText" => "リーダアプリ",
     "template" => [
       "type" => "carousel",
       "columns" => [
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.jpg",
-            "title" => "リーダーアプリ・コンテンツ",
+            "title" => "リーダーアプリ・コンテンツ1",
             "text" => "Q1～Q3",
             "actions" => [
               [
@@ -184,7 +184,7 @@ if ($text == 'はい') {
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
-            "title" => "リーダーアプリ・コンテンツ",
+            "title" => "リーダーアプリ・コンテンツ2",
             "text" => "Q4～Q6",
             "actions" => [
               [
@@ -206,7 +206,7 @@ if ($text == 'はい') {
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.jpg",
-            "title" => "リーダーアプリ・コンテンツ",
+            "title" => "リーダーアプリ・コンテンツ3",
             "text" => "Q7～Q9",
             "actions" => [
               [
