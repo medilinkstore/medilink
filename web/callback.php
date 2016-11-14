@@ -76,7 +76,7 @@ if ($text == 'はい') {
           [
             "type" => "message",
             "label" => "違うやつ",
-            "text" => "そのほか"
+            "text" => "他の事"
           ]
       ]
     ]
