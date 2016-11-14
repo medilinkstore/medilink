@@ -30,8 +30,8 @@ if ($text == 'はい') {
           ],
           [
             "type" => "message",
-            "label" => "リーダーアプリ・コンテンツ",
-            "text" => "リーダーアプリ"
+            "label" => "最も多い質問",
+            "text" => "最も多い質問"
           ],
           [
             "type" => "message",
@@ -48,8 +48,9 @@ if ($text == 'はい') {
   ];
 } else if ($text == 'いいえ') {
   exit;
+} 
 //会員登録
-} else if ($text == '会員登録') {
+ else if ($text == '会員登録') {
   $response_format_text = [
     "type" => "template",
     "altText" => "mediLink",
@@ -152,84 +153,7 @@ if ($text == 'はい') {
 （パスワードを変更する） 
 サイトにログインした状態で、プロフィール編集画面(https://www.medilink-study.com/mypage/change.php)より任意のパスワードに変更ができます。"
 			];
-//リーダーアプリ
-} else if ($text == 'リーダーアプリ') {
-  $response_format_text = [
-    "type" => "template",
-    "altText" => "リーダアプリ",
-    "template" => [
-      "type" => "carousel",
-      "columns" => [
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.jpg",
-            "title" => "リーダーアプリ・コンテンツ1",
-            "text" => "Q1～Q3",
-            "actions" => [
-              [
-                  "type" => "message",
-                  "label" => "「mediLink」アプリの入手方法",
-                  "text" => "入手方法"
-              ],
-              [
-                  "type" => "message",
-                  "label" => "データサイズ",
-                  "uri" => "データサイズ"
-              ],
-              [
-                  "type" => "message",
-                  "label" => "オフラインで使用",
-                  "uri" => "オフライン"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
-            "title" => "リーダーアプリ・コンテンツ2",
-            "text" => "Q4～Q6",
-            "actions" => [
-              [
-                  "type" => "message",
-                  "label" => "複数の端末で使いたい",
-                  "text" => "複数"
-              ],
-              [
-                  "type" => "message",
-                  "label" => "端末の機種変更",
-                  "text" => "機種変更"
-              ],
-              [
-                  "type" => "message",
-                  "label" => "使用できる端末の台数制限",
-                  "text" => "一度に利用できる端末"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.jpg",
-            "title" => "リーダーアプリ・コンテンツ3",
-            "text" => "Q7～Q9",
-            "actions" => [
-              [
-                  "type" => "message",
-                  "label" => "メモ、マーカー、ブックマークの共有",
-                  "text" => "メモ"
-              ],
-              [
-                  "type" => "message",
-                  "label" => "書籍とアプリの違い",
-                  "text" => "ちがい"
-              ],
-              [
-                  "type" => "message",
-                  "label" => "「mediLink版イヤーノートアプリ」",
-                  "text" => "mediLink版イヤーノートアプリ"
-              ]
-            ]
-          ]
-      ]
-    ]
-  ];
-//リーダーアプリ
+
 
 //他の事
 } else if ($text == '他の事') {
@@ -308,10 +232,7 @@ if ($text == 'はい') {
       ]
     ]
   ];
-//会員登録
-
-
-
+//他の事
 } else if ($text == '質問') {
   $response_format_text = [
     "type" => "template",
