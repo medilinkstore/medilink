@@ -125,13 +125,31 @@ if ($text == 'はい') {
     ]
   ];
 
-//対処方法ライト版
-} else if ($text == '確認メールが届かない対処方法') {
+//対処方法受信設定の方法を見る版
+} else if ($text == '受信設定の方法を見る') {
 	  $response_format_text = [
 		    	"type" => "text",
-			"text" => "確認メールは、ご登録いただいたアドレスに自動的に送信されます。下記をご確認ください。<br>１）「迷惑メール」フォルダをご確認ください。 
+			"text" => "確認メールは、ご登録いただいたアドレスに自動的に送信されます。下記をご確認ください。
+１）「迷惑メール」フォルダをご確認ください。 
 ２）再度、メールアドレスに誤りがないよう、よくご確認のうえ会員登録をお手続きください。同じアドレスでは登録できないため、最初のご登録メールアドレスに誤りがなかった場合、「※すでに会員登録で使用されているメールアドレスです。」と表示され、登録ができません。 
 ３）上記１、２でも原因が判明しない場合、「@medilink-study.com」からのメールを受信できるよう設定を再度ご確認のうえ、お問い合わせページ(https://www.medilink-study.com/contact/)よりご連絡ください。 "
+			];
+
+//対処方法受信メール版
+} else if ($text == '受信設定の方法を見る') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "キャリア（Docomo・AU・Softbank）毎に設定が異なります。詳細はコチラ(https://www.medilink-study.com/user_data/qa.php#regist)をご参照ください。"
+			];
+
+//対処方法パスワード版
+} else if ($text == 'パスワードの対処方法を見る') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "（パスワードを忘れた場合） 
+パスワードの再発行ページ(https://www.medilink-study.com/forgot/)より、登録メールアドレスと氏名を入力し、お手続きください。自動でメールアドレス宛に、仮パスワードが発行されます。
+（パスワードを変更する） 
+サイトにログインした状態で、プロフィール編集画面(https://www.medilink-study.com/mypage/change.php)より任意のパスワードに変更ができます。"
 			];
 } else if ($text == '他の事') {
   $response_format_text = [
@@ -215,7 +233,7 @@ if ($text == 'はい') {
     "altText" => "こんにちは　何かご質問ですか？（はい／いいえ）",
     "template" => [
         "type" => "confirm",
-        "text" => "こんにちわ 何かご用ですか？",
+        "text" => "こんにちは　何かご質問ですか？",
         "actions" => [
             [
               "type" => "message",
