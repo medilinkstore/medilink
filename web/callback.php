@@ -167,17 +167,17 @@ if ($text == 'はい') {
             "actions" => [
               [
                   "type" => "message",
-                  "label" => "「mediLink」アプリの入手方法がわからない",
+                  "label" => "「mediLink」アプリの入手方法",
                   "text" => "入手方法"
               ],
               [
                   "type" => "message",
-                  "label" => "データサイズを知りたい",
+                  "label" => "データサイズ",
                   "uri" => "データサイズ"
               ],
               [
                   "type" => "message",
-                  "label" => "オフラインで使用したい",
+                  "label" => "オフラインで使用",
                   "uri" => "オフライン"
               ]
             ]
@@ -221,7 +221,7 @@ if ($text == 'はい') {
               ],
               [
                   "type" => "message",
-                  "label" => "「mediLink版イヤーノートアプリ」はどうすれば使えますか？",
+                  "label" => "「mediLink版イヤーノートアプリ」",
                   "text" => "mediLink版イヤーノートアプリ"
               ]
             ]
