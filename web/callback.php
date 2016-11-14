@@ -56,7 +56,7 @@ if ($text == 'はい') {
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.jpg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/mail.png",
             "title" => "会員登録したのに確認メールが届かない",
             "text" => "こちらですか？",
             "actions" => [
@@ -78,7 +78,7 @@ if ($text == 'はい') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/jushin.png",
             "title" => "携帯メールの受信設定の方法がわからない",
             "text" => "それともこちら？（２つ目）",
             "actions" => [
@@ -100,7 +100,7 @@ if ($text == 'はい') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.jpg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/password.jpg",
             "title" => "パスワードを忘れた／パスワードを変更したい",
             "text" => "はたまたこちら？（３つ目）",
             "actions" => [
