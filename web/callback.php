@@ -61,9 +61,9 @@ if ($text == 'はい') {
             "text" => "こちらですか？",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "見る",
-                  "data" => "action=rsv&itemid=111"
+                  "type" => "message",
+                  "label" => "対処方法を見る",
+                  "text" => "確認メールが届かない対処方法"
               ],
               [
                   "type" => "uri",
@@ -72,8 +72,8 @@ if ($text == 'はい') {
               ],
               [
                   "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://www.medilink-study.com/user_data/about.php"
+                  "label" => "詳しく対処方法を見る（ブラウザ起動）",
+                  "uri" => "https://www.medilink-study.com/user_data/qa.php#regist"
               ]
             ]
           ],
@@ -83,9 +83,9 @@ if ($text == 'はい') {
             "text" => "それともこちら？（２つ目）",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "見る",
-                  "data" => "action=rsv&itemid=222"
+                  "type" => "message",
+                  "label" => "対処方法を見る",
+                  "text" => "受信設定の方法を見る"
               ],
               [
                   "type" => "uri",
@@ -95,7 +95,7 @@ if ($text == 'はい') {
               [
                   "type" => "uri",
                   "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://www.medilink-study.com/user_data/about.php"
+                  "uri" => "https://www.medilink-study.com/user_data/qa.php#regist"
               ]
             ]
           ],
@@ -105,9 +105,9 @@ if ($text == 'はい') {
             "text" => "はたまたこちら？（３つ目）",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "見る",
-                  "data" => "action=rsv&itemid=222"
+                  "type" => "message",
+                  "label" => "対処方法を見る",
+                  "text" => "パスワードの対処方法を見る"
               ],
               [
                   "type" => "uri",
@@ -117,7 +117,7 @@ if ($text == 'はい') {
               [
                   "type" => "uri",
                   "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://www.medilink-study.com/user_data/about.php"
+                  "uri" => "https://www.medilink-study.com/user_data/qa.php#regist"
               ]
             ]
           ]
