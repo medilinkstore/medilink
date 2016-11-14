@@ -152,6 +152,86 @@ if ($text == 'はい') {
 （パスワードを変更する） 
 サイトにログインした状態で、プロフィール編集画面(https://www.medilink-study.com/mypage/change.php)より任意のパスワードに変更ができます。"
 			];
+//リーダーアプリ
+} else if ($text == 'リーダーアプリ') {
+  $response_format_text = [
+    "type" => "template",
+    "altText" => "mediLink",
+    "template" => [
+      "type" => "carousel",
+      "columns" => [
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.jpg",
+            "title" => "リーダーアプリ・コンテンツ",
+            "text" => "Q1～Q3",
+            "actions" => [
+              [
+                  "type" => "message",
+                  "label" => "「mediLink」アプリの入手方法がわからない",
+                  "text" => "入手方法"
+              ],
+              [
+                  "type" => "message",
+                  "label" => "mediLinkコンテンツのデータサイズを知りたい",
+                  "uri" => "データサイズ"
+              ],
+              [
+                  "type" => "message",
+                  "label" => "通信環境のない（オフライン）状態でコンテンツを使用したい",
+                  "uri" => "オフライン"
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
+            "title" => "リーダーアプリ・コンテンツ",
+            "text" => "Q4～Q6",
+            "actions" => [
+              [
+                  "type" => "message",
+                  "label" => "複数の端末で使いたい",
+                  "text" => "複数"
+              ],
+              [
+                  "type" => "message",
+                  "label" => "端末の機種変更などをおこなう際の手続きを知りたい",
+                  "text" => "機種変更"
+              ],
+              [
+                  "type" => "message",
+                  "label" => "「一度に利用できる端末(二台まで)を超えています」と表示され、アプリにログインできない",
+                  "text" => "一度に利用できる端末"
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.jpg",
+            "title" => "リーダーアプリ・コンテンツ",
+            "text" => "Q7～Q9",
+            "actions" => [
+              [
+                  "type" => "message",
+                  "label" => "メモ、マーカー、ブックマークを、複数の端末で共有したい",
+                  "text" => "メモ"
+              ],
+              [
+                  "type" => "message",
+                  "label" => "「mediLink版イヤーノートアプリ」と書籍『イヤーノート』のちがいを知りたい",
+                  "text" => "ちがい"
+              ],
+              [
+                  "type" => "message",
+                  "label" => "「mediLink版イヤーノートアプリ」はどうすれば使えますか？",
+                  "text" => "mediLink版イヤーノートアプリ"
+              ]
+            ]
+          ]
+      ]
+    ]
+  ];
+//リーダーアプリ
+
+//他の事
 } else if ($text == '他の事') {
   $response_format_text = [
     "type" => "template",
