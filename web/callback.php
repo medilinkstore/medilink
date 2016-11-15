@@ -231,7 +231,7 @@ if ($text == 'はい') {
     ]
   ];
 //他の事
-} else if ($text == '質問','こんにちは') {
+} else if ($text == '質問') {
   $response_format_text = [
     "type" => "template",
     "altText" => "こんにちは　何かご質問ですか？（はい／いいえ）",
