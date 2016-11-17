@@ -19,9 +19,7 @@ if ($text == 'はい') {
     "altText" => "こちらの事項ですか?",
     "template" => [
       "type" => "buttons",
-      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
       "title" => "よくある質問",
-      "text" => "こちらですか?",
       "actions" => [
           [
             "type" => "message",
