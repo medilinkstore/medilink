@@ -153,6 +153,64 @@ if ($text == 'はい') {
 （パスワードを変更する） 
 サイトにログインした状態で、プロフィール編集画面(https://www.medilink-study.com/mypage/change.php)より任意のパスワードに変更ができます。"
 			];
+//最も多い質問
+} else if ($text == '最も多い質問') {
+  $response_format_text = [
+    "type" => "template",
+    "altText" => "「一度に利用できる端末(二台まで)を超えています」と表示され、アプリにログインできない（はい／いいえ）",
+    "template" => [
+        "type" => "confirm",
+        "text" => "「一度に利用できる端末(二台まで)を超えています」と表示され、アプリにログインできない",
+        "actions" => [
+            [
+              "type" => "message",
+              "label" => "はい",
+              "text" => "利用端末"
+            ],
+            [
+              "type" => "message",
+              "label" => "いいえ",
+              "text" => "シリアル"
+            ]
+        ]
+    ]
+  ];
+} else if ($text == 'シリアル') {
+  $response_format_text = [
+    "type" => "template",
+    "altText" => "「シリアルナンバーを登録しても、QBオンラインが使えない、解説が表示されない（はい／いいえ）",
+    "template" => [
+        "type" => "confirm",
+        "text" => "シリアルナンバーを登録しても、QBオンラインが使えない、解説が表示されない",
+        "actions" => [
+            [
+              "type" => "message",
+              "label" => "はい",
+              "text" => "シリアルナンバー"
+            ],
+            [
+              "type" => "message",
+              "label" => "いいえ",
+              "text" => "他の事"
+            ]
+        ]
+    ]
+  ];
+} else if ($text == '利用端末') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "mediLinkアプリは、アカウントごとにログイン中の端末が管理されており、２台まで同時にログインが可能です。アプリ上でログアウトすれば、端末の登録情報は解除され、別の端末でもログインができます。
+なお、端末の紛失や故障、ログアウトせずに機種変更した場合など、会員さまご自身によるログアウトが不可能な場合、弊社にて端末登録解除の手続きを代行します。 
+詳細は以下にアクセスしてください。
+https://www.medilink-study.com/user_data/qa.php#faq1"
+			];
+} else if ($text == 'シリアルナンバー') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "シリアルナンバーの変更・追加を行われた際には、QBオンラインからログアウトし、再ログインを行ってください。再ログイン後も解説が表示されない場合、以下にアクセスし、詳細をご確認ください。
+https://www.medilink-study.com/user_data/qa.php#faq2"
+			];
+//最も多い質問
 //他の事
 } else if ($text == '他の事') {
   $response_format_text = [
