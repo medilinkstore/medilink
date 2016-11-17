@@ -225,9 +225,9 @@ https://www.medilink-study.com/user_data/qa.php#faq2"
             "text" => "こちらですか？",
             "actions" => [
               [
-                  "type" => "postback",
+                  "type" => "message",
                   "label" => "見る",
-                  "data" => "action=rsv&itemid=111"
+                  "data" => "medilinkとは"
               ],
               [
                   "type" => "uri",
@@ -247,9 +247,9 @@ https://www.medilink-study.com/user_data/qa.php#faq2"
             "text" => "それともこちら？（２つ目）",
             "actions" => [
               [
-                  "type" => "postback",
+                  "type" => "messange",
                   "label" => "見る",
-                  "data" => "action=rsv&itemid=222"
+                  "data" => "mediLinkの構成"
               ],
               [
                   "type" => "uri",
@@ -269,9 +269,9 @@ https://www.medilink-study.com/user_data/qa.php#faq2"
             "text" => "はたまたこちら？（３つ目）",
             "actions" => [
               [
-                  "type" => "postback",
+                  "type" => "message",
                   "label" => "見る",
-                  "data" => "action=rsv&itemid=222"
+                  "data" => "複数端末での利用"
               ],
               [
                   "type" => "uri",
@@ -289,6 +289,29 @@ https://www.medilink-study.com/user_data/qa.php#faq2"
     ]
   ];
 //他の事
+} else if ($text == 'medilinkとは') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "mediLinkとは、医療系学生と医療従事者を対象とした医学電子サービスです。
+学習支援のため、利便性の高い電子コンテンツを開発するとともに、コンテンツ間の連携を強化していくことを目指しています。
+
+参考書や問題集、画像集、動画解説など、さまざまなコンテンツをリンクさせることで、医学知識をより効率的に、より深く理解することができます"
+			];
+} else if ($text == 'medilinkの構成') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "mediLinkは、webサイトとリーダーアプリからなります。"
+			];
+} else if ($text == '複数端末での利用') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "mediLinkアプリは、2端末まで同時ログイン可能です。
+
+端末の種類は、
+iPadとAndroidスマホ
+AndroidタブレットとiPhone
+など組み合わせ自由です。"
+			];
 } else if ($text == '質問' or $text == 'こんにちは') {
   $response_format_text = [
     "type" => "template",
