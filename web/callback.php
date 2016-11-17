@@ -37,11 +37,6 @@ if ($text == 'はい') {
             "type" => "message",
             "label" => "購入方法",
             "text" => "購入方法"
-          ],
-          [
-            "type" => "message",
-            "label" => "違うやつ",
-            "text" => "他の事"
           ]
       ]
     ]
@@ -191,7 +186,7 @@ if ($text == 'はい') {
             [
               "type" => "message",
               "label" => "いいえ",
-              "text" => "他の事"
+              "text" => "いいえ"
             ]
         ]
     ]
@@ -210,86 +205,11 @@ https://www.medilink-study.com/user_data/qa.php#faq1"
 			"text" => "シリアルナンバーの変更・追加を行われた際には、QBオンラインからログアウトし、再ログインを行ってください。再ログイン後も解説が表示されない場合、以下にアクセスし、詳細をご確認ください。
 https://www.medilink-study.com/user_data/qa.php#faq2"
 			];
-//最も多い質問
-//他の事
-} else if ($text == '他の事') {
-  $response_format_text = [
-    "type" => "template",
-    "altText" => "mediLink",
-    "template" => [
-      "type" => "carousel",
-      "columns" => [
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.jpg",
-            "title" => "mediLinkとは",
-            "text" => "こちらですか？",
-            "actions" => [
-              [
-                  "type" => "message",
-                  "label" => "見る",
-                  "data" => "medilinkとは"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "問い合わせる（ブラウザ起動）",
-                  "uri" => "https://www.medilink-study.com/contact/"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://www.medilink-study.com/user_data/about.php"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
-            "title" => "mediLinkの構成",
-            "text" => "それともこちら？（２つ目）",
-            "actions" => [
-              [
-                  "type" => "messange",
-                  "label" => "見る",
-                  "data" => "mediLinkの構成"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "問い合わせる（ブラウザ起動）",
-                  "uri" => "https://www.medilink-study.com/contact/"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://www.medilink-study.com/user_data/about.php"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.jpg",
-            "title" => "mediLinkアプリ 複数端末でのご利用について",
-            "text" => "はたまたこちら？（３つ目）",
-            "actions" => [
-              [
-                  "type" => "message",
-                  "label" => "見る",
-                  "data" => "複数端末での利用"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "問い合わせる（ブラウザ起動）",
-                  "uri" => "https://www.medilink-study.com/contact/"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://www.medilink-study.com/user_data/about.php"
-              ]
-            ]
-          ]
-      ]
-    ]
-  ];
-//他の事
-
+} else if ($text == '購入方法') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "購入はmediLkinkストアから購入"
+			];
 } else if ($text == '質問' or $text == 'こんにちは') {
   $response_format_text = [
     "type" => "template",
