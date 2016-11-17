@@ -289,21 +289,7 @@ https://www.medilink-study.com/user_data/qa.php#faq2"
     ]
   ];
 //他の事
-} else if ($text == 'medilinkとは') {
-	  $response_format_text = [
-		    	"type" => "text",
-			"text" => "mediLinkとは、医療系学生と医療従事者を対象とした医学電子サービスです。"
-			];
-} else if ($text == 'medilinkの構成') {
-	  $response_format_text = [
-		    	"type" => "text",
-			"text" => "mediLinkは、webサイトとリーダーアプリからなります。"
-			];
-} else if ($text == '複数端末での利用') {
-	  $response_format_text = [
-		    	"type" => "text",
-			"text" => "mediLinkアプリは、2端末まで同時ログイン可能です。"
-			];
+
 } else if ($text == '質問' or $text == 'こんにちは') {
   $response_format_text = [
     "type" => "template",
