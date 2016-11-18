@@ -208,7 +208,8 @@ https://www.medilink-study.com/user_data/qa.php#faq2"
 } else if ($text == '購入方法') {
 	  $response_format_text = [
 		    	"type" => "text",
-			"text" => "購入はmediLkinkストアから購入"
+			"text" => "購入はmediLkinkストアから購入
+					https://www.medilink-study.com/"
 			];
 } else if ($text == '質問' or $text == 'こんにちは') {
   $response_format_text = [
