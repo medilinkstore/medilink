@@ -232,6 +232,85 @@ https://www.medilink-study.com/user_data/qa.php#faq2"
         ]
     ]
   ];
+//医学生
+} else if ($text == '医学生に関しての質問ではない') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "ほかの質問をお願いします。"
+			];
+//医学生の質問
+} else if ($text == '医学生に関して質問') {
+  $response_format_text = [
+    "type" => "template",
+    "altText" => "医学生に関して質問",
+    "template" => [
+      "type" => "buttons",
+      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
+      "title" => "医学生に関して質問",
+      "text" => "こちらですか?",
+      "actions" => [
+          [
+            "type" => "message",
+            "label" => "医学生会員とは",
+            "text" => "医学生会員とは"
+          ],
+          [
+            "type" => "message",
+            "label" => "医学生会員特典",
+            "text" => "医学生会員特典"
+          ],
+          [
+            "type" => "message",
+            "label" => "登録条件",
+            "text" => "登録条件"
+          ]
+      ]
+    ]
+  ];
+//医学生会員とは
+} else if ($text == '医学生会員とは') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "「医学生会員」とは、医師をめざす学生様を対象としたmediLink会員の種別です。
+学年に応じたサービスを提供するため、学生証の画像をご登録いただくことで、ご所属と学年を確認いたします。今後、医学生会員限定の特典も続々ご用意する予定です。"
+			];
+//医学生会員特典
+}  else if ($text == '医学生会員特典') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "「『病気がみえる』書籍＋アプリセットがオトクに買える！
+医学生会員の方は、mediLinkストアで『病気がみえる』の書籍とアプリをセットでオトクに購入することができます。"
+			];
+//登録条件
+}  else if ($text == '登録条件') {
+	  $response_format_text = [
+		    	"type" => "text",
+			"text" => "「医学生会員」には、下記のすべての条件を満たす方にお申し込みいただけます。
+
+1・mediLink会員である
+2・申込み時点で国内の大学医学部（医学科）に在籍している、または申込み時点以降の医師国家試験の受験が確定している"
+			];
+} else if ($text == '医学生' or $text == '医学生会員' or $text == '医学生会員って') {
+  $response_format_text = [
+    "type" => "template",
+    "altText" => "医学生に関するご質問ですか？（はい／いいえ）",
+    "template" => [
+        "type" => "confirm",
+        "text" => "医学生に関するご質問ですか？",
+        "actions" => [
+            [
+              "type" => "message",
+              "label" => "はい",
+              "text" => "医学生に関して質問"
+            ],
+            [
+              "type" => "message",
+              "label" => "いいえ",
+              "text" => "医学生に関しての質問ではない"
+            ]
+        ]
+    ]
+  ];
 }
 $post_data = [
 	"replyToken" => $replyToken,
