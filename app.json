@@ -1,7 +1,7 @@
 {
     "name": "#LINE Messaging API test PHP",
     "description": "heroku 上にデプロイされる LINE Messaging APIのサーバースクリプト",
-    "repository": "https://github.com/k-nihei/mediqa.git",
+    "repository": "https://github.com/medilinkstore/medilink.git",
     "keywords": ["php", "line-messaging-api"],
     "env": {
       "LINE_CHANNEL_ACCESS_TOKEN": {
