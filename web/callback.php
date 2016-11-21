@@ -211,7 +211,7 @@ https://www.medilink-study.com/user_data/qa.php#faq2"
 			"text" => "購入はmediLkinkストアから購入
 					https://www.medilink-study.com/"
 			];
-} else if ($text == '質問' or $text == 'こんにちは') {
+} else if ($text == '質問' or $text == '使い方') {
   $response_format_text = [
     "type" => "template",
     "altText" => "こんにちは　何かご質問ですか？（はい／いいえ）",
